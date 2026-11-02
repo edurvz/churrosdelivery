@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Churros Delivery | Churros artesanais em Mirandópolis</title>
+<meta name="description" content="Churros artesanais fritos na hora, com recheio cremoso, entregues em Mirandópolis por R$ 2,00. Quinta a domingo, a partir das 19h. Peça pelo cardápio digital ou WhatsApp.">
+<meta name="theme-color" content="#F4C3CC">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Churros Delivery">
+<meta property="og:title" content="Churros Delivery | O sabor que conquista">
+<meta property="og:description" content="Frito na hora, recheio cremoso. Delivery em Mirandópolis, quinta a domingo.">
+<meta property="og:image" content="assets/churros-mao.webp">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/logo-160.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Lobster&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/churros-hero-1200.webp" imagesrcset="assets/churros-hero-800.webp 800w, assets/churros-hero-1200.webp 1200w, assets/churros-hero.webp 1536w" imagesizes="(max-width: 560px) 116vw, min(920px, 64vw, 72vh)" fetchpriority="high">
+<style>
+:root{
+  --rosa:#F4C3CC;          /* fundo do selo */
+  --rosa-claro:#FADDE2;
+  --rosa-forte:#E07D95;
+  --choco:#4A2317;
+  --choco-2:#6B3420;
+  --caramelo:#C9782F;
+  --mel:#F0B56A;
+  --leite:#FFF1E6;
+  --cacau:#7A4A3A;          /* texto secundário em fundo claro */
+  --cacau-claro:#8C5B4C;
+  --rosa-poeira:#E9C9C4;    /* texto secundário em fundo chocolate */
+  --rosa-cinza:#D9B9B2;
+  --aberto:#2E8B57;
+  --fechado:#B33A3A;
+  --gutter:clamp(16px,4vw,56px);
+  --ease:cubic-bezier(.2,.9,.25,1.15);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--rosa);color:var(--choco);font-family:'Fredoka',system-ui,'Segoe UI',sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--choco);color:var(--rosa)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--choco);outline-offset:3px;border-radius:10px}
+/* superfícies chocolate: contorno claro */
+.story :focus-visible,.menu-cta :focus-visible,.foot :focus-visible,.wa:focus-visible,.week :focus-visible{outline-color:var(--rosa-claro)}
+.script{font-family:'Lobster',Georgia,cursive;font-weight:400;letter-spacing:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--choco);color:var(--rosa);padding:12px 16px;border-radius:12px;font-weight:700}
+.skip:focus{left:8px}
+html{scrollbar-color:var(--choco-2) var(--rosa-claro)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font:600 16px/1 'Fredoka',sans-serif;text-decoration:none;border:2.5px solid var(--choco);cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s ease,background-color .2s ease}
+.btn svg{flex:none}
+.btn-choco{background:var(--choco);color:var(--rosa-claro);box-shadow:0 8px 18px -8px rgba(74,35,23,.7)}
+.btn-choco:hover{transform:translateY(-3px);box-shadow:0 14px 24px -10px rgba(74,35,23,.75)}
+.btn-line{background:transparent;color:var(--choco)}
+.btn-line:hover{background:var(--rosa-claro);transform:translateY(-3px)}
+.btn-rosa{background:var(--rosa);color:var(--choco);border-color:var(--rosa)}
+.btn-rosa:hover{transform:translateY(-3px);background:var(--rosa-claro)}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* header */
+.top{position:absolute;inset:0 0 auto;z-index:20}
+.top nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2.5px var(--choco)}
+.brand span{font-size:26px;line-height:1}
+.links{display:flex;gap:28px;font-weight:500}
+.links a{text-decoration:none}
+.links a:hover{text-decoration:underline}
+.top .btn{min-height:46px;padding:0 20px;font-size:15px}
+
+/* status */
+.status{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--leite);font-weight:600;font-size:14px;box-shadow:0 0 0 2px var(--choco)}
+.status i{width:10px;height:10px;border-radius:50%;background:var(--fechado);flex:none}
+.status.on i{background:var(--aberto);box-shadow:0 0 0 4px rgba(46,139,87,.2)}
+
+/* hero */
+.hero{--H:clamp(80px,9vh,104px);--S:clamp(112px,min(30.5vw,44vh),520px);position:relative;min-height:max(680px,100svh);overflow:hidden;background:
+  radial-gradient(120% 70% at 50% 40%,var(--rosa-claro) 0%,var(--rosa) 62%);display:flex;flex-direction:column}
+.hero-stage{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;padding:var(--H) var(--gutter) 0}
+/* o nome ocupa a largura toda; o churros atravessa a metade de baixo das letras */
+.hero-name{position:absolute;left:50%;top:var(--H);translate:-50% 0;margin:0;font-size:var(--S);line-height:1;letter-spacing:-.01em;color:var(--choco);white-space:nowrap;pointer-events:none;user-select:none}
+.hero-name .ch{display:inline-block;transform-origin:50% 100%}
+.hero-pic{position:relative;z-index:2;width:min(920px,64vw,72vh);margin:calc(var(--S)*.43) 0 -6vh 6vw;filter:drop-shadow(0 34px 28px rgba(74,35,23,.42))}
+.hero-pic img{width:100%;height:auto;rotate:-12deg}
+.hero-sticker{position:absolute;z-index:3;right:max(var(--gutter),calc(50% - 46vh));top:calc(var(--H) + var(--S)*.06);margin:0;padding:.12em .55em .2em;border-radius:999px;background:var(--choco);color:var(--rosa);font-size:clamp(34px,min(4.6vw,7vh),68px);line-height:1;rotate:8deg;box-shadow:0 14px 24px -12px rgba(74,35,23,.7)}
+.hero-copy{position:relative;z-index:3;width:100%;max-width:1240px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:auto;padding-top:12px}
+.hero-copy .info{display:flex;flex-direction:column;gap:12px;align-items:flex-start;text-align:left}
+.hero-copy .sub{margin:0;font-size:clamp(17px,1.5vw,20px);font-weight:500;max-width:36ch}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{padding:6px 14px;border-radius:999px;background:var(--choco);color:var(--rosa-claro);font-weight:600;font-size:14px}
+
+/* rua + food truck */
+.road{position:relative;height:140px;margin-top:22px;flex:none}
+.road::before{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:var(--choco)}
+.road::after{content:"";position:absolute;left:0;right:0;bottom:20px;height:5px;background:repeating-linear-gradient(90deg,var(--mel) 0 46px,transparent 46px 92px);opacity:.9}
+.curb{position:absolute;left:0;right:0;bottom:46px;height:8px;background:var(--choco-2)}
+.truck{position:absolute;left:0;bottom:30px;width:clamp(170px,15vw,230px)}
+.truck svg{width:100%;height:auto;overflow:visible}
+.truck .balloon{position:absolute;left:46%;bottom:100%;translate:-50% 0;margin-bottom:4px;white-space:nowrap;background:var(--leite);border:2.5px solid var(--choco);border-radius:16px;padding:6px 14px;font-weight:600;font-size:15px;opacity:0}
+.truck .balloon::after{content:"";position:absolute;left:50%;top:100%;width:14px;height:14px;background:var(--leite);border:2.5px solid var(--choco);border-top:0;border-left:0;translate:-50% -6px;rotate:45deg}
+
+/* seções */
+section{position:relative}
+.sec{padding:clamp(72px,10vw,140px) 0}
+.h2{margin:0;font-size:clamp(46px,6.4vw,92px);line-height:.95;text-wrap:balance}
+.lead{font-size:clamp(17px,1.5vw,20px);max-width:52ch;margin:18px 0 0}
+
+/* história com foto */
+.story{background:var(--choco);color:var(--rosa-claro)}
+.story-row{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,90px);align-items:center}
+.story-photo{position:relative;margin:0}
+.story{padding-top:clamp(48px,6vw,96px)}
+.story-photo img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:40% 100%;border-radius:28px;box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+.story-photo figcaption{position:absolute;right:-14px;bottom:28px;background:var(--rosa);color:var(--choco);padding:10px 18px;border-radius:999px;font-weight:600;rotate:-4deg;box-shadow:0 10px 20px -10px rgba(0,0,0,.5)}
+.story .h2{color:var(--rosa)}
+.facts{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:0}
+.facts li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:1.5px solid rgba(250,221,226,.22)}
+.facts li:last-child{border-bottom:1.5px solid rgba(250,221,226,.22)}
+.facts svg{flex:none;margin-top:2px}
+.facts b{display:block;font-size:19px;font-weight:600;color:var(--leite)}
+.facts span{color:var(--rosa-poeira)}
+.facts svg{color:var(--rosa)}
+
+/* cardápio */
+.menu{background:var(--rosa)}
+.menu-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(36px,5vw,60px)}
+.menu-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.board{background:var(--leite);border:2.5px solid var(--choco);border-radius:32px;padding:clamp(22px,3vw,40px)}
+.board h3{margin:0 0 4px;font-size:clamp(30px,min(8.4vw,3.4vw + 12px),46px);line-height:1}
+.board h4{margin:26px 0 6px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--choco-2);display:flex;align-items:center;gap:10px}
+.board h4::before{content:"";width:18px;height:4px;border-radius:2px;background:var(--rosa-forte)}
+.board h4:first-of-type{margin-top:18px}
+.items{list-style:none;margin:0;padding:0}
+.items li{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:10px;padding:10px 0}
+.items li+li{border-top:1.5px dashed rgba(74,35,23,.18)}
+.items .n{font-weight:600;font-size:18px}
+.items .d{grid-column:1/3;grid-row:2;font-size:14.5px;color:var(--cacau);margin-top:-2px}
+.items .dots{border-bottom:2px dotted rgba(74,35,23,.35);transform:translateY(-5px)}
+.items .p{font-weight:700;font-size:18px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.menu-side{display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)}
+.menu-note{margin:0;font-size:14.5px;color:var(--choco-2)}
+.menu-cta{display:flex;flex-direction:column;gap:14px;padding:clamp(22px,3vw,34px);border-radius:32px;background:var(--choco);color:var(--rosa-claro)}
+.menu-cta p{margin:0;font-size:clamp(28px,2.8vw,38px);line-height:1.05;color:var(--rosa)}
+.menu-cta .btn{align-self:flex-start}
+
+/* horários */
+.hours{background:var(--rosa-forte)}
+.hours-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.hours .h2{color:var(--choco)}
+.week{list-style:none;margin:0;padding:0;background:var(--leite);border:2.5px solid var(--choco);border-radius:32px;overflow:hidden}
+.week li{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px clamp(20px,3vw,34px);font-size:clamp(18px,1.8vw,22px);font-weight:600}
+.week li+li{border-top:2px dashed rgba(74,35,23,.2)}
+.week .t{font-variant-numeric:tabular-nums}
+.week .off{color:var(--cacau-claro);font-weight:500;font-size:17px}
+.week li.today{background:var(--choco);color:var(--rosa-claro)}
+.week li.today .day::after{content:"hoje";margin-left:10px;padding:3px 10px;border-radius:999px;background:var(--rosa);color:var(--choco);font-size:12px;font-weight:700;vertical-align:3px}
+.week li.today .off{color:var(--rosa)}
+.hours .lead{color:var(--choco)}
+.hours .status{margin-top:26px}
+
+/* como pedir */
+.order{background:var(--rosa)}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:clamp(36px,5vw,56px) 0 0;padding:0;list-style:none;border-top:2.5px solid var(--choco);border-bottom:2.5px solid var(--choco)}
+.ways li{padding:28px clamp(16px,2.4vw,32px) 30px 0;display:flex;flex-direction:column;gap:8px}
+.ways li+li{padding-left:clamp(16px,2.4vw,32px);border-left:2.5px solid var(--choco)}
+.ways b{font-family:'Lobster',Georgia,cursive;font-weight:400;font-size:clamp(28px,2.6vw,36px);line-height:1.05;margin-top:6px}
+.ways span{font-size:17px}
+.ways span{color:var(--choco-2)}
+.where{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,4vw,56px);margin-top:clamp(48px,6vw,80px);align-items:stretch}
+.where address{font-style:normal;font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.35;margin:16px 0 22px}
+.where .btns{display:flex;flex-wrap:wrap;gap:12px}
+.map{position:relative;min-height:360px;border-radius:32px;overflow:hidden;border:2.5px solid var(--choco);background:var(--rosa-claro)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* rodapé */
+.foot{background:var(--choco);color:var(--rosa-claro);padding:clamp(64px,8vw,110px) 0 28px;overflow:hidden}
+.foot-big{margin:0;font-size:clamp(60px,10vw,150px);line-height:.95;color:var(--rosa)}
+.foot-big small{display:block;font-size:.42em;color:var(--mel);margin-top:.2em}
+.foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;margin-top:48px}
+.foot-col{display:flex;flex-direction:column;gap:8px}
+.foot-col b{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mel);font-weight:700}
+.foot-col a{text-decoration:none}
+.foot-col a:hover{text-decoration:underline;color:var(--rosa)}
+.foot-bottom{margin-top:56px;padding-top:20px;border-top:1.5px solid rgba(250,221,226,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--rosa-cinza)}
+.foot-bottom a{display:inline-block;padding:6px 0;text-decoration:none}
+.foot-bottom a:hover{color:var(--rosa);text-decoration:underline}
+
+/* WhatsApp flutuante */
+.wa{position:fixed;right:18px;bottom:18px;z-index:40;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:var(--choco);color:var(--rosa-claro);border:2.5px solid var(--rosa-claro);box-shadow:0 12px 26px -10px rgba(74,35,23,.8);transition:transform .3s var(--ease)}
+.wa:hover{transform:scale(1.08) rotate(-6deg)}
+
+@media (max-width:900px){
+  .links{display:none}
+  .hero-copy{flex-direction:column;align-items:center}
+  .hero-copy .info{align-items:center;text-align:center}
+  .chips,.hero-ctas{justify-content:center}
+  .story-row,.menu-grid,.hours-row,.where{grid-template-columns:1fr}
+  .story-photo figcaption{right:12px}
+  .ways{grid-template-columns:1fr}
+  .ways li,.ways li+li{display:grid;grid-template-columns:44px 1fr;column-gap:14px;row-gap:2px;align-items:center;padding:18px 0;border-left:0}
+  .ways li svg{grid-row:1/3;align-self:center}
+  .ways b{margin-top:0}
+  .ways li+li{border-top:2.5px solid var(--choco)}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .brand span{display:none}
+  .brand img{width:52px;height:52px}
+  .hero{--S:31vw;--H:96px}
+  .hero-pic{width:116vw;margin:calc(var(--S)*.36) 0 0}
+  .hero-sticker{right:var(--gutter);top:calc(var(--H) + var(--S)*1.02);font-size:34px}
+  .road{height:130px}
+  .truck{width:170px}
+  .foot-bottom{padding-right:76px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Bakery",
+  "name":"Churros Delivery",
+  "description":"Churros artesanais fritos na hora, com recheio cremoso. Delivery em Mirandópolis.",
+  "telephone":"+55 18 99692-9423",
+  "servesCuisine":"Churros",
+  "priceRange":"R$ 11–19",
+  "menu":"https://churrosdelivery018.com/products",
+  "address":{"@type":"PostalAddress","streetAddress":"R. B, Jardim Esplanada","addressLocality":"Mirandópolis","addressRegion":"SP","postalCode":"16800-000","addressCountry":"BR"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday"],"opens":"19:30","closes":"22:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"19:00","closes":"22:00"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="top">
+  <nav class="wrap" aria-label="Principal">
+    <a class="brand" href="#topo" aria-label="Churros Delivery, início">
+      <img src="assets/logo-160.png" width="58" height="58" alt="">
+      <span class="script">Churros Delivery</span>
+    </a>
+    <div class="links">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#horarios">Horários</a>
+      <a href="#pedir">Como pedir</a>
+    </div>
+    <a class="btn btn-choco" href="https://churrosdelivery018.com/products" target="_blank" rel="noopener">Peça aqui</a>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO -->
+<section id="topo" class="hero" aria-labelledby="hero-title">
+  <div class="hero-stage">
+    <h1 id="hero-title" class="hero-name script">
+      <span class="sr">Churros Delivery</span>
+      <span aria-hidden="true"><span class="ch">C</span><span class="ch">h</span><span class="ch">u</span><span class="ch">r</span><span class="ch">r</span><span class="ch">o</span><span class="ch">s</span></span>
+    </h1>
+    <div class="hero-pic">
+      <img src="assets/churros-hero-1200.webp" srcset="assets/churros-hero-800.webp 800w, assets/churros-hero-1200.webp 1200w, assets/churros-hero.webp 1536w" sizes="(max-width: 560px) 116vw, min(920px, 64vw, 72vh)" width="1536" height="1024" alt="Churros recheado com Nutella e coberto com Ovomaltine crocante, açúcar e canela na massa dourada" fetchpriority="high">
+    </div>
+    <p class="hero-sticker script" aria-hidden="true">Delivery</p>
+    <div class="hero-copy">
+      <div class="info">
+        <p class="sub">Churros artesanais em Mirandópolis. Frito na hora, recheio cremoso até a ponta.</p>
+        <ul class="chips" aria-label="Destaques">
+          <li>Frito na hora</li>
+          <li>Entrega R$ 2,00</li>
+          <li class="js-status"><span>Qui a Dom · 19h às 22h</span></li>
+        </ul>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-choco" href="https://churrosdelivery018.com/products" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          Peça aqui
+        </a>
+        <a class="btn btn-line" data-wa href="https://wa.me/5518996929423" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.5c.3 1.8 1.7 3.9 4.6 5 .6.2 1.3-.2 1.6-.8l.3-.6-1.9-1-.8.9c-1-.5-1.8-1.3-2.3-2.3l.9-.8-1-1.9-.6.3c-.6.3-.9.8-.8 1.2z"/></svg>
+          Pedir no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="road" aria-hidden="true">
+    <div class="curb"></div>
+    <div class="truck">
+      <span class="balloon">Saindo quentinho!</span>
+      <svg viewBox="0 0 340 210">
+        <ellipse cx="170" cy="200" rx="150" ry="8" fill="#2E140C" opacity=".35"/>
+        <g class="truck-body">
+          <!-- placa do teto: churros -->
+          <g class="roof-sign">
+            <rect x="70" y="10" width="140" height="34" rx="17" fill="#FFF1E6" stroke="#4A2317" stroke-width="4"/>
+            <text x="140" y="36" text-anchor="middle" font-family="Lobster, cursive" font-size="25" fill="#4A2317">Churros</text>
+            <g transform="translate(206 4) rotate(28)">
+              <rect x="0" y="0" width="14" height="52" rx="7" fill="#E59A4B" stroke="#4A2317" stroke-width="3"/>
+              <path d="M4 6v40M10 6v40" stroke="#A35F22" stroke-width="2"/>
+              <path d="M-1 0h16v16c-3 4-5 0-8 3-3-3-5 1-8-3z" fill="#5B2A18" stroke="#4A2317" stroke-width="2"/>
+            </g>
+            <rect x="108" y="44" width="6" height="12" fill="#4A2317"/><rect x="166" y="44" width="6" height="12" fill="#4A2317"/>
+          </g>
+          <!-- carroceria -->
+          <rect x="14" y="56" width="236" height="118" rx="18" fill="#F7A9BA" stroke="#4A2317" stroke-width="4.5"/>
+          <rect x="14" y="146" width="236" height="12" fill="#E07D95"/>
+          <!-- toldo listrado -->
+          <g>
+            <rect x="34" y="68" width="150" height="20" fill="#FFF1E6" stroke="#4A2317" stroke-width="3.5"/>
+            <path d="M52 68v20M70 68v20M88 68v20M106 68v20M124 68v20M142 68v20M160 68v20" stroke="#4A2317" stroke-width="0"/>
+            <rect x="34" y="68" width="18" height="20" fill="#4A2317"/><rect x="70" y="68" width="18" height="20" fill="#4A2317"/><rect x="106" y="68" width="18" height="20" fill="#4A2317"/><rect x="142" y="68" width="18" height="20" fill="#4A2317"/>
+            <path d="M34 88q9 10 18 0q9 10 18 0q9 10 18 0q9 10 18 0q9 10 18 0q9 10 18 0q9 10 18 0q6 7 12 0" fill="#FFF1E6" stroke="#4A2317" stroke-width="3.5" stroke-linejoin="round"/>
+          </g>
+          <!-- janela de atendimento -->
+          <rect x="40" y="98" width="138" height="40" rx="6" fill="#4A2317"/>
+          <g class="window-goods">
+            <rect x="58" y="112" width="10" height="26" rx="5" fill="#E59A4B"/>
+            <rect x="72" y="108" width="10" height="30" rx="5" fill="#E59A4B"/>
+            <rect x="86" y="114" width="10" height="24" rx="5" fill="#E59A4B"/>
+            <path d="M118 138v-16a12 12 0 0 1 24 0v16" fill="#F7A9BA"/>
+            <circle cx="130" cy="116" r="7" fill="#F7A9BA"/>
+          </g>
+          <rect x="34" y="136" width="150" height="8" rx="3" fill="#C9782F" stroke="#4A2317" stroke-width="3"/>
+          <text x="109" y="168" text-anchor="middle" font-family="Lobster, cursive" font-size="17" fill="#4A2317">Delivery</text>
+          <!-- cabine -->
+          <path d="M250 82h38c10 0 16 5 20 13l18 34c3 6 4 10 4 16v19c0 6-4 10-10 10h-70z" fill="#F7A9BA" stroke="#4A2317" stroke-width="4.5" stroke-linejoin="round"/>
+          <path d="M262 94h26c6 0 9 3 12 8l13 24h-51z" fill="#BFE3EC" stroke="#4A2317" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M276 98l-8 22" stroke="#fff" stroke-width="3" opacity=".7" stroke-linecap="round"/>
+          <rect x="314" y="146" width="16" height="10" rx="3" fill="#F0B56A" stroke="#4A2317" stroke-width="3"/>
+          <rect x="262" y="136" width="14" height="5" rx="2.5" fill="#4A2317"/>
+          <rect x="8" y="158" width="20" height="10" rx="3" fill="#4A2317"/>
+          <!-- escapamento -->
+          <rect x="2" y="160" width="14" height="7" rx="3" fill="#6B3420"/>
+        </g>
+        <g class="puffs" fill="#FFF1E6" stroke="#4A2317" stroke-width="2.5">
+          <circle class="puff" cx="-6" cy="162" r="7"/>
+          <circle class="puff" cx="-6" cy="162" r="7"/>
+          <circle class="puff" cx="-6" cy="162" r="7"/>
+        </g>
+        <g class="wheel" data-c="74 176">
+          <circle cx="74" cy="176" r="24" fill="#2E140C"/>
+          <circle cx="74" cy="176" r="12" fill="#FFF1E6" stroke="#4A2317" stroke-width="3"/>
+          <path d="M74 166v20M64 176h20" stroke="#E07D95" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <g class="wheel" data-c="270 176">
+          <circle cx="270" cy="176" r="24" fill="#2E140C"/>
+          <circle cx="270" cy="176" r="12" fill="#FFF1E6" stroke="#4A2317" stroke-width="3"/>
+          <path d="M270 166v20M260 176h20" stroke="#E07D95" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section class="sec story" aria-labelledby="story-title">
+  <div class="wrap story-row">
+    <figure class="story-photo">
+      <img src="assets/churros-mao.webp" width="1274" height="1235" loading="lazy" alt="Mão com luva segurando churros na embalagem rosa, recheado de Nutella e coberto de Ovomaltine crocante">
+      <figcaption>Nutella / Ovomaltine · R$ 17</figcaption>
+    </figure>
+    <div>
+      <h2 id="story-title" class="h2 script">Crocante por fora, cremoso até a ponta.</h2>
+      <p class="lead">Cada churros é frito na hora do pedido, passado no açúcar com canela e recheado sem economia. Sai da nossa cozinha em Mirandópolis direto pra sua porta.</p>
+      <ul class="facts">
+        <li>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.6-2.6 1.5-3.5.2 1.4 1 2 1.5 2 0-2 .2-4.3 1-6.5z"/><path d="M6 19h12"/></svg>
+          <div><b>Frito na hora</b><span>Nada de churros parado na estufa.</span></div>
+        </li>
+        <li>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 21V9a5 5 0 0 1 10 0v12"/><path d="M7 13h10M7 17h10"/><path d="M10 4.5C10 3 11 2 12 2s2 1 2 2.5"/></svg>
+          <div><b>Recheio cremoso</b><span>Doce de leite, chocolate, Nutella, pistache e mais.</span></div>
+        </li>
+        <li>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h6l-2-7H9"/><path d="M15 17l1-7h3l2 4"/><path d="M4 10h5"/></svg>
+          <div><b>Entrega por R$ 2,00</b><span>Ou retire com a gente, se preferir.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CARDÁPIO -->
+<section id="cardapio" class="sec menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div class="menu-head">
+      <div>
+        <h2 id="menu-title" class="h2 script">Escolha o seu.</h2>
+        <p class="lead">Todos com açúcar e canela na massa. Os preços abaixo são do nosso cardápio digital, onde você monta o pedido.</p>
+      </div>
+    </div>
+    <div class="menu-grid">
+      <div class="board">
+        <h3 class="script">Churros</h3>
+        <h4>Clássicos</h4>
+        <ul class="items">
+          <li><span class="n">Tradicional Doce de Leite</span><span class="dots"></span><span class="p">R$ 11</span></li>
+          <li><span class="n">Tradicional Chocolate</span><span class="dots"></span><span class="p">R$ 11</span></li>
+          <li><span class="n">Gourmet Doce de Leite</span><span class="dots"></span><span class="p">R$ 13</span></li>
+          <li><span class="n">Gourmet Chocolate</span><span class="dots"></span><span class="p">R$ 13</span></li>
+          <li><span class="n">Chocolate com Doce de Leite</span><span class="dots"></span><span class="p">R$ 13</span></li>
+          <li><span class="n">Doce de Leite com Chocolate</span><span class="dots"></span><span class="p">R$ 13</span></li>
+        </ul>
+        <h4>Especiais</h4>
+        <ul class="items">
+          <li><span class="n">Nutella</span><span class="dots"></span><span class="p">R$ 16</span></li>
+          <li><span class="n">Leitinho</span><span class="dots"></span><span class="p">R$ 16</span><span class="d">Nutella + creme leitinho</span></li>
+          <li><span class="n">Sensação</span><span class="dots"></span><span class="p">R$ 16</span><span class="d">Nutella e creme de morango</span></li>
+          <li><span class="n">Nutella / Ovomaltine</span><span class="dots"></span><span class="p">R$ 17</span></li>
+          <li><span class="n">Nutella / Pistache</span><span class="dots"></span><span class="p">R$ 17</span><span class="d">Recheio de Nutella, cobertura de pistache e castanha</span></li>
+          <li><span class="n">Kinder Bueno</span><span class="dots"></span><span class="p">R$ 19</span></li>
+        </ul>
+      </div>
+      <div class="menu-side">
+        <div class="board">
+          <h3 class="script">Cestinha de Churros</h3>
+          <ul class="items" style="margin-top:14px">
+            <li><span class="n">Cestinha Leitinho</span><span class="dots"></span><span class="p">R$ 16</span><span class="d">Nutella e leitinho</span></li>
+            <li><span class="n">Cestinha Nutella / Morango</span><span class="dots"></span><span class="p">R$ 16</span></li>
+            <li><span class="n">Cestinha Sensação</span><span class="dots"></span><span class="p">R$ 16</span><span class="d">Nutella e creme de morango</span></li>
+            <li><span class="n">Cestinha Ovomaltine</span><span class="dots"></span><span class="p">R$ 17</span><span class="d">Nutella + Ovomaltine</span></li>
+            <li><span class="n">Cestinha Kinder Bueno</span><span class="dots"></span><span class="p">R$ 19</span></li>
+          </ul>
+        </div>
+        <div class="menu-cta">
+          <p class="script">Bateu a vontade? A gente frita agora.</p>
+          <a class="btn btn-rosa" href="https://churrosdelivery018.com/products" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            Montar meu pedido
+          </a>
+        </div>
+        <p class="menu-note">Preços consultados no cardápio digital em novembro de 2026. Em caso de diferença, vale o valor do cardápio digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORÁRIOS -->
+<section id="horarios" class="sec hours" aria-labelledby="hours-title">
+  <div class="wrap hours-row">
+    <div>
+      <h2 id="hours-title" class="h2 script">Semana de atendimento</h2>
+      <p class="lead">A fritadeira liga de quinta a domingo. De segunda a quarta a gente descansa pra voltar com tudo.</p>
+      <p class="status js-status" role="status"><i></i><span>Quinta a domingo, a partir das 19h</span></p>
+    </div>
+    <ul class="week">
+      <li data-days="4"><span class="day">Quinta-feira</span><span class="t">19:30 às 22h</span></li>
+      <li data-days="5"><span class="day">Sexta-feira</span><span class="t">19:30 às 22h</span></li>
+      <li data-days="6"><span class="day">Sábado</span><span class="t">19:00 às 22h</span></li>
+      <li data-days="0"><span class="day">Domingo</span><span class="t">19:00 às 22h</span></li>
+      <li data-days="1 2 3" class="off-day"><span class="day">Segunda a quarta</span><span class="off">Fechado</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- COMO PEDIR -->
+<section id="pedir" class="sec order" aria-labelledby="order-title">
+  <div class="wrap">
+    <h2 id="order-title" class="h2 script">Do jeito que for melhor pra você.</h2>
+    <ul class="ways">
+      <li>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h6l-2-7H9"/><path d="M15 17l1-7h3l2 4"/><path d="M4 10h5"/></svg>
+        <b>Delivery</b><span>Entrega por R$ 2,00 em Mirandópolis.</span>
+      </li>
+      <li>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <b>Retirada</b><span>Peça antes e busque quentinho.</span>
+      </li>
+      <li>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18"/><path d="M5 10v10M19 10v10"/><path d="M7 10l1.5-5h7L17 10"/></svg>
+        <b>No local</b><span>Venha comer com a gente.</span>
+      </li>
+    </ul>
+    <div class="where">
+      <div>
+        <h3 class="script" style="margin:0;font-size:clamp(34px,3.4vw,46px);line-height:1">Onde estamos</h3>
+        <address>R. B, Jardim Esplanada<br>Mirandópolis, SP · 16800-000</address>
+        <div class="btns">
+          <a class="btn btn-choco" href="https://churrosdelivery018.com/products" target="_blank" rel="noopener">Peça aqui</a>
+          <a class="btn btn-line" data-wa href="https://wa.me/5518996929423" target="_blank" rel="noopener">(18) 99692-9423</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Mapa: Churros Delivery, Jardim Esplanada, Mirandópolis" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Rua%20B%2C%20Jardim%20Esplanada%2C%20Mirand%C3%B3polis%20-%20SP&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-big script">Feito com carinho,<small>pra adoçar seu dia!</small></p>
+    <div class="foot-row">
+      <div class="foot-col">
+        <b>Pedidos</b>
+        <a href="https://churrosdelivery018.com/products" target="_blank" rel="noopener">Cardápio digital</a>
+        <a data-wa href="https://wa.me/5518996929423" target="_blank" rel="noopener">WhatsApp (18) 99692-9423</a>
+      </div>
+      <div class="foot-col">
+        <b>Atendimento</b>
+        <span>Qui e Sex · 19:30 às 22h</span>
+        <span>Sáb e Dom · 19:00 às 22h</span>
+      </div>
+      <div class="foot-col">
+        <b>Siga</b>
+        <a href="https://www.threads.net/@churrosdeliveryy018" target="_blank" rel="noopener">@churrosdeliveryy018</a>
+        <span>R. B, Jardim Esplanada, Mirandópolis</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="ano">2026</span> Churros Delivery · Mirandópolis, SP</span>
+      <a href="#topo">Voltar ao topo</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" data-wa href="https://wa.me/5518996929423" target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.5c.3 1.8 1.7 3.9 4.6 5 .6.2 1.3-.2 1.6-.8l.3-.6-1.9-1-.8.9c-1-.5-1.8-1.3-2.3-2.3l.9-.8-1-1.9-.6.3c-.6.3-.9.8-.8 1.2z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function () {
+  // WhatsApp com mensagem pronta
+  var msg = encodeURIComponent('Olá, Churros Delivery! Quero fazer um pedido.');
+  document.querySelectorAll('[data-wa]').forEach(function (a) { a.href = 'https://wa.me/5518996929423?text=' + msg; });
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Aberto agora? (horário de Brasília/SP)
+  var HOURS = { 4: [1170, 1320], 5: [1170, 1320], 6: [1140, 1320], 0: [1140, 1320] }; // minutos
+  var NAMES = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+  function fmt(m) { var h = Math.floor(m / 60), mm = m % 60; return h + (mm ? ':' + String(mm).padStart(2, '0') : 'h'); }
+  function nowSP() {
+    var p = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+    var o = {}; p.forEach(function (x) { o[x.type] = x.value; });
+    return { day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(o.weekday), min: (+o.hour) * 60 + (+o.minute) };
+  }
+  function status() {
+    var n = nowSP(), h = HOURS[n.day];
+    if (h && n.min >= h[0] && n.min < h[1]) return { on: true, text: 'Aberto agora · até as 22h' };
+    if (h && n.min < h[0]) return { on: false, text: 'Abre hoje às ' + fmt(h[0]) };
+    for (var i = 1; i <= 7; i++) {
+      var d = (n.day + i) % 7;
+      if (HOURS[d]) return { on: false, text: 'Fechado agora · abre ' + (i === 1 ? 'amanhã' : NAMES[d]) + ' às ' + fmt(HOURS[d][0]) };
+    }
+  }
+  function paint() {
+    var s = status(), n = nowSP();
+    document.querySelectorAll('.js-status').forEach(function (el) {
+      el.classList.toggle('on', s.on);
+      el.querySelector('span').textContent = s.text;
+    });
+    document.querySelectorAll('.week li').forEach(function (li) {
+      li.classList.toggle('today', li.dataset.days.split(' ').indexOf(String(n.day)) > -1);
+    });
+  }
+  paint(); setInterval(paint, 60000);
+
+  // Animação
+  if (!window.gsap) return;
+  var mm = gsap.matchMedia();
+
+  mm.add('(prefers-reduced-motion: no-preference)', function () {
+    // entrada do hero
+    // letras caem, o churros chega de lado e "bate" no nome, as letras amassam e voltam
+    var intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
+    intro
+      .from('.hero-name .ch', { yPercent: -110, rotation: function (i) { return i % 2 ? 8 : -8; }, autoAlpha: 0, duration: .9, ease: 'bounce.out', stagger: .055 })
+      .from('.hero-pic', { xPercent: 70, rotation: 38, scale: .7, autoAlpha: 0, duration: .75, ease: 'power3.in' }, .45)
+      .to('.hero-name .ch', { scaleY: .82, scaleX: 1.06, duration: .09, ease: 'power2.out', stagger: { each: .025, from: 'end' } })
+      .to('.hero-name .ch', { scaleY: 1, scaleX: 1, duration: .8, ease: 'elastic.out(1.1,.35)', stagger: { each: .025, from: 'end' } })
+      .from('.hero-sticker', { scale: 0, rotation: -40, duration: .7, ease: 'back.out(2.2)' }, '-=.9')
+      .from('.hero-copy .info > *, .hero-ctas', { y: 24, autoAlpha: 0, duration: .8, stagger: .08 }, '-=.7');
+
+    // profundidade: churros e nome reagem ao ponteiro em sentidos opostos
+    if (window.matchMedia('(pointer: fine)').matches) {
+      var hero = document.querySelector('.hero');
+      var picX = gsap.quickTo('.hero-pic', 'x', { duration: .9, ease: 'power3.out' });
+      var picY = gsap.quickTo('.hero-pic', 'y', { duration: .9, ease: 'power3.out' });
+      var picR = gsap.quickTo('.hero-pic', 'rotation', { duration: .9, ease: 'power3.out' });
+      var nameX = gsap.quickTo('.hero-name', 'x', { duration: 1.2, ease: 'power3.out' });
+      hero.addEventListener('pointermove', function (e) {
+        var nx = e.clientX / innerWidth - .5, ny = e.clientY / innerHeight - .5;
+        picX(nx * 46); picY(ny * 26); picR(nx * 5); nameX(nx * -22);
+      });
+      hero.addEventListener('pointerleave', function () { picX(0); picY(0); picR(0); nameX(0); });
+    }
+
+    // churros flutuando
+    gsap.to('.hero-pic img', { y: -14, rotation: -5, duration: 3.2, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1.4 });
+
+    // rodas girando o tempo todo em que o caminhão anda
+    var wheels = gsap.utils.toArray('.truck .wheel').map(function (w) {
+      return gsap.to(w, { rotation: 360, svgOrigin: w.dataset.c, duration: .55, ease: 'none', repeat: -1 });
+    });
+    var bob = gsap.to('.truck-body', { y: -2.5, duration: .18, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+    var puffs = gsap.utils.toArray('.truck .puff');
+    puffs.forEach(function (p, i) {
+      gsap.fromTo(p, { x: 0, y: 0, scale: .4, autoAlpha: .9 }, { x: -46, y: -22, scale: 1.6, autoAlpha: 0, duration: 1.1, ease: 'power1.out', repeat: -1, delay: i * .37 });
+    });
+    function engine(speed) { wheels.forEach(function (w) { gsap.to(w, { timeScale: speed, duration: .5 }); }); bob.timeScale(speed || .001); }
+
+    // percurso: entra pela esquerda, para no meio, sai pela direita
+    var road = document.querySelector('.road');
+    var truck = document.querySelector('.truck');
+    var drive = gsap.timeline({ repeat: -1, delay: 1.2 });
+    drive
+      .fromTo(truck, { x: function () { return -truck.offsetWidth - 40; } },
+        { x: function () { return road.offsetWidth * .5 - truck.offsetWidth * .5; }, duration: 3.6, ease: 'power2.out', onStart: function () { engine(1); } })
+      .add(function () { engine(0); })
+      .to('.truck-body', { rotation: 2.5, svgOrigin: '170 180', duration: .18, ease: 'power2.out', yoyo: true, repeat: 1 }, '-=.15')
+      .to('.truck .balloon', { autoAlpha: 1, y: -6, duration: .45, ease: 'back.out(2)' })
+      .to('.truck .balloon', { autoAlpha: 0, y: 0, duration: .3, ease: 'power2.in' }, '+=1.6')
+      .add(function () { engine(1); })
+      .to(truck, { x: function () { return road.offsetWidth + 40; }, duration: 3.2, ease: 'power2.in' })
+      .set({}, {}, '+=1');
+
+    // só o hero anima: pausa tudo quando ele sai da tela
+    var io = new IntersectionObserver(function (entries) {
+      entries[0].isIntersecting ? gsap.globalTimeline.resume() : gsap.globalTimeline.pause();
+    });
+    io.observe(document.querySelector('.hero'));
+
+    return function () { io.disconnect(); gsap.globalTimeline.resume(); gsap.set('.truck', { clearProps: 'all' }); };
+  });
+
+  mm.add('(prefers-reduced-motion: reduce)', function () {
+    gsap.set('.truck', { left: '50%', xPercent: -50 });
+  });
+})();
+</script>
+</body>
+</html>

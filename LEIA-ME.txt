@@ -1,0 +1,33 @@
+CHURROS DELIVERY - como subir o site
+
+1. GitHub (pelo site github.com)
+   - Crie um repositório novo (ex.: churros-delivery), público ou privado.
+   - "Add file" > "Upload files": arraste index.html, robots.txt e este LEIA-ME.txt. Commit.
+   - Crie a pasta assets: "Add file" > "Create new file", digite  assets/x  e salve
+     (ou arraste os arquivos da pasta assets já dentro de "assets/").
+   - Envie os 6 arquivos de assets/ para dentro de assets/:
+       churros-hero.webp, churros-hero-800.webp, churros-hero-1200.webp,
+       churros-mao.webp, logo-160.png, favicon-64.png
+   - Apague o arquivo assets/x se tiver criado.
+
+2. Vercel (vercel.com)
+   - "Add New" > "Project" > importe o repositório do GitHub.
+   - Framework Preset: Other. Build Command: vazio. Output Directory: vazio (raiz).
+   - Deploy.
+
+3. Depois do deploy, com o domínio definido
+   - No index.html, troque o caminho do og:image para o endereço completo, ex.:
+     <meta property="og:image" content="https://SEU-DOMINIO/assets/churros-mao.webp">
+     (sem isso a prévia do link no WhatsApp/Facebook não aparece).
+
+Estrutura final no GitHub:
+   index.html
+   robots.txt
+   LEIA-ME.txt
+   assets/
+     churros-hero.webp
+     churros-hero-800.webp
+     churros-hero-1200.webp
+     churros-mao.webp
+     favicon-64.png
+     logo-160.png
